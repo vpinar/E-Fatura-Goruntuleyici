@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{573691EF-EFC0-4CED-BA18-60D01B12FD0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SignatureValidator</RootNamespace>
+    <AssemblyName>SignatureValidator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="asn1rt">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\asn1rt.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-asic">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-asic.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-asn">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-asn.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-certstore">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-certstore.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-certvalidation">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-certvalidation.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-cmssignature">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-cmssignature.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-common">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-common.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-crypto">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-crypto-bouncyprovider">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-crypto-bouncyprovider.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-iaik_wrapper">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-iaik_wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-infra">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-infra.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-managedPkcs11">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-managedPkcs11.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-mssclient">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-mssclient.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-mssclient-aveaprovider">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-mssclient-aveaprovider.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-mssclient-turkcellprovider">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-mssclient-turkcellprovider.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-pkcs11net">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-pkcs11net.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-signature">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-signature.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-smartcard">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-smartcard.dll</HintPath>
+    </Reference>
+    <Reference Include="ma3api-xmlsignature">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\ma3api-xmlsignature.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Library\MA3-CSHARP-API-2.1.2\x86\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTransferObject\CertificateValidationResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataTransferObject\SignatureInfo.cs" />
+    <Compile Include="DataTransferObject\SignatureValidationResult.cs" />
+    <Compile Include="DataTransferObject\SignedDocumentValidationResult.cs" />
+    <Compile Include="DataTransferObject\ValidationResult.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SignatureValidationConfig\certval-policy-malimuhur.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SignatureValidationConfig\lisans\Lisans.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SignatureValidationConfig\policy.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SignatureValidationConfig\xmlsignature-config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="SignatureValidationConfig\sertifika_deposu\e-Guven_Kok.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\e-Guven_Kok_2.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\EBG_KOKSM.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\etugra_Kok_2.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM Kurumsal Kök Sertifika Hizmet Sağlayıcısı - Sürüm 1.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM_Kok_1.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM_Kok_2.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM_Kok_3.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM_Kok_4.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KamuSM_Kok_5.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KOKSHS.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KOKSHS.v3.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\kokshs.v4.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\KOKSHS.V5.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\Kurumsal-s1.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\mmeshs-s1.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SignatureValidationConfig\sertifika_deposu\SVT\SertifikaDeposu.svt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
