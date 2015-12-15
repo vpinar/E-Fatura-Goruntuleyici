@@ -2,7 +2,6 @@
 using System;
 using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace EFaturaGoruntuleyici
@@ -27,8 +26,8 @@ namespace EFaturaGoruntuleyici
                 tcFaturaBilgileri.Visible = true;
 
                 wbFaturaXml.DocumentText = dosyaIcerik.StartsWith("<?xml version=\"1.0\"") ? dosyaIcerik : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + dosyaIcerik;
-                wbFaturaHtml.DocumentText = Utils.Utils.Invoice2Html(dosyaIcerik, Utils.Utils.InvoiceRendeMode.Custom);
-                wbGibFaturaGorunumu.DocumentText = Utils.Utils.Invoice2Html(dosyaIcerik, Utils.Utils.InvoiceRendeMode.GIB);
+                wbFaturaHtml.DocumentText = Utils.Utils.Invoice2Html(dosyaIcerik, Utils.Utils.InvoiceRenderMode.Custom);
+                wbGibFaturaGorunumu.DocumentText = Utils.Utils.Invoice2Html(dosyaIcerik, Utils.Utils.InvoiceRenderMode.GIB);
                 wbSignatureXml.DocumentText = Utils.Utils.GetSignatureXmlFromInvoice(dosyaIcerik);
 
                 var validationResult = SignatureValidationUtil.ValidateSignatureFromXml(dosyaIcerik);
@@ -91,8 +90,17 @@ namespace EFaturaGoruntuleyici
             }
         }
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        private void btPrint_Click(object sender, EventArgs e)
         {
+            var objPrint = wbGibFaturaGorunumu;
+
+            if (tcFaturaBilgileri.SelectedTab != null && tcFaturaBilgileri.SelectedTab.Name == "tpGibFaturaGorunumu")
+            {
+                objPrint = wbFaturaHtml;
+            }
+
+            objPrint.ShowPrintPreviewDialog();
         }
+
     }
 }

@@ -85,10 +85,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="csd.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="EFaturaGoruntuleyici.cd" />
     <None Include="Images\Ahmet_Yesevi_Logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

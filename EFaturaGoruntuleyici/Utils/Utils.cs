@@ -9,7 +9,7 @@ namespace EFaturaGoruntuleyici.Utils
 {
     public static class Utils
     {
-        public enum InvoiceRendeMode
+        public enum InvoiceRenderMode
         {
             /// <summary>
             /// Firmanın özelleşmiş Fatura formatını kullan. Yoksa boş veri getir.
@@ -21,7 +21,13 @@ namespace EFaturaGoruntuleyici.Utils
             GIB
         }
 
-        public static string Invoice2Html(string invoiceXmlIcerik, InvoiceRendeMode invoiceRendeMode)
+        /// <summary>
+        /// XML veri formatındaki faturanın html'e dönüştürülmüş halini getirir.
+        /// </summary>
+        /// <param name="invoiceXmlIcerik">UBL-TR formatlı fatura içeriği</param>
+        /// <param name="invoiceRendeMode">fatura html dönüştürme moduu</param>
+        /// <returns></returns>
+        public static string Invoice2Html(string invoiceXmlIcerik, InvoiceRenderMode invoiceRendeMode)
         {
             var invoiceXmlDocument = new XmlDocument();
 
@@ -33,7 +39,7 @@ namespace EFaturaGoruntuleyici.Utils
             invoiceXmlDocument.LoadXml(invoiceXmlIcerik);
 
             var styleSheetXmlContent = string.Empty;
-            if (invoiceRendeMode == InvoiceRendeMode.Custom)
+            if (invoiceRendeMode == InvoiceRenderMode.Custom)
             {
                 var embeddedDocumentBinaryObjectList = invoiceXmlDocument.GetElementsByTagName("EmbeddedDocumentBinaryObject", "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2");
                 var embededStyleSheetXmlContent = string.Empty;
@@ -55,7 +61,7 @@ namespace EFaturaGoruntuleyici.Utils
 
                 styleSheetXmlContent = Encoding.UTF8.GetString(Convert.FromBase64String(embededStyleSheetXmlContent));
             }
-            else if (invoiceRendeMode == InvoiceRendeMode.GIB)
+            else if (invoiceRendeMode == InvoiceRenderMode.GIB)
             {
                 styleSheetXmlContent = System.IO.File.ReadAllText("Files/FaturaFormat.xslt");
             }
@@ -82,11 +88,6 @@ namespace EFaturaGoruntuleyici.Utils
 
             return swResult.ToString().Replace("charset=utf-16", "charset=utf-8");
         }
-        private class Imza
-        {
-            public Guid Id { get; set; }
-            public string ImzaXmlNode { get; set; }
-        }
 
         public static string GetSignatureXmlFromInvoice(string signedXml)
         {
@@ -94,12 +95,11 @@ namespace EFaturaGoruntuleyici.Utils
             var xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(signedXml);
 
-            var nodes = xmlDoc.GetElementsByTagName("Signature", "http://www.w3.org/2000/09/xmldsig#");
+            var node = xmlDoc.GetElementsByTagName("Signature", "http://www.w3.org/2000/09/xmldsig#").Item(0);
 
-            foreach (XmlNode item in nodes)
+            if (node != null)
             {
-                result = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + Environment.NewLine + item.OuterXml;
-                break;
+                result = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + Environment.NewLine + node.OuterXml;
             }
 
             return result;

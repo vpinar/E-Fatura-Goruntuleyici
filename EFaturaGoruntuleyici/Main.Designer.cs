@@ -33,6 +33,7 @@
             this.btnFaturaSec = new System.Windows.Forms.ToolStripButton();
             this.btCustomPdf = new System.Windows.Forms.ToolStripButton();
             this.btGIBPdf = new System.Windows.Forms.ToolStripButton();
+            this.btPrint = new System.Windows.Forms.ToolStripButton();
             this.btnAbout = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tcFaturaBilgileri = new System.Windows.Forms.TabControl();
@@ -54,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblImzaDorulamaSonucudata = new System.Windows.Forms.Label();
             this.lblImzadogrulamaSonuc = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.tcFaturaBilgileri.SuspendLayout();
             this.tpFaturaGorunumu.SuspendLayout();
@@ -73,7 +73,7 @@
             this.btnFaturaSec,
             this.btCustomPdf,
             this.btGIBPdf,
-            this.toolStripButton1,
+            this.btPrint,
             this.btnAbout});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
@@ -112,6 +112,17 @@
             this.btGIBPdf.Text = "PDF";
             this.btGIBPdf.ToolTipText = "Dosyayı PDF olarak kaydet.";
             this.btGIBPdf.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btPrint
+            // 
+            this.btPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btPrint.Image = ((System.Drawing.Image)(resources.GetObject("btPrint.Image")));
+            this.btPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(36, 52);
+            this.btPrint.Text = "btPrint";
+            this.btPrint.ToolTipText = "Faturayı yazdırmak için tıklayınız.";
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // btnAbout
             // 
@@ -321,17 +332,6 @@
             this.lblImzadogrulamaSonuc.TabIndex = 0;
             this.lblImzadogrulamaSonuc.Text = "İmza Doğrulama Sonucu :";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 52);
-            this.toolStripButton1.Text = "btPrint";
-            this.toolStripButton1.ToolTipText = "Faturayı yazdırmak için tıklayınız.";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +387,7 @@
         private System.Windows.Forms.DataGridView dataGridCertControl;
         private System.Windows.Forms.DataGridViewImageColumn SonucSimge;
         private System.Windows.Forms.ToolStripButton btCustomPdf;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btPrint;
 
     }
 }
