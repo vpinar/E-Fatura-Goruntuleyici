@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SignatureValidator.DataTransferObject.CertificateValidationResult">
+    <Position X="5.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAIAAAAAAAA=</HashCode>
+      <FileName>DataTransferObject\CertificateValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidator.DataTransferObject.SignatureInfo">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DataTransferObject\SignatureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidator.DataTransferObject.SignatureValidationResult">
+    <Position X="2.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIIAAAAAAAA=</HashCode>
+      <FileName>DataTransferObject\SignatureValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidator.DataTransferObject.SignedDocumentValidationResult">
+    <Position X="3" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEABAAQ=</HashCode>
+      <FileName>DataTransferObject\SignedDocumentValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidator.DataTransferObject.ValidationResult">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIIAAAAAQAA=</HashCode>
+      <FileName>DataTransferObject\ValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidator.Properties.Resources">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignatureValidationUtil">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SignatureValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

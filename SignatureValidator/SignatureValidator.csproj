@@ -143,6 +143,7 @@
     <Content Include="SignatureValidationConfig\xmlsignature-config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="SignatureValidator.cd" />
     <None Include="SignatureValidationConfig\sertifika_deposu\e-Guven_Kok.crt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
