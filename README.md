@@ -1,4 +1,4 @@
-# E-Fatura-Goruntuleyici
+# E-Fatura Görüntüleyici
 Gelir İdaresi Başkanlığı tarafından tanımlana UBLTR formatında faturaların gösterilmesini sağlayan uygulama
 Bu uygulama sayesinde :
 <ol>
