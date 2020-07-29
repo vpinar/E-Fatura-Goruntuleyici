@@ -1,5 +1,5 @@
 # E-Fatura-Goruntuleyici
-Gelirler idaresi başkanlığı tarafından tanımlana UBLTR formatında faturaların gösterilmesini sağlayan uygulama
+Gelir İdaresi Başkanlığı tarafından tanımlana UBLTR formatında faturaların gösterilmesini sağlayan uygulama
 Bu uygulama sayesinde :
 <ol>
   <li>UBLTR formatındaki faturayı firma tarafından tanımlanan şekilde HTML olarak görebilirsiniz.</li>
